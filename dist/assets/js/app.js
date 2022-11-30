@@ -66,7 +66,9 @@ $(() => {
 		pauseOnDotsHover: false,
 		autoSlidesToShow: true,
 		variableWidth: true,
+
 	});
+
 	// анимация
 	AOS.init({
 		duration: 1500,
@@ -273,4 +275,61 @@ $(() => {
 	catalogSwiper();
 
 
+
+
+	// start анимации
+
+	function animateCircleFooter() {
+		// Получить заголовок
+		let start = document.getElementById('brend');
+
+		let blockAnim = document.querySelector('.brend-title');
+		let blockRow = document.querySelectorAll('.brend-row');
+		let blockRowTwo = document.querySelectorAll('.brend-row-2');
+		if (start && blockAnim) {
+
+			window.addEventListener('scroll', () => {
+				let startPos = start.offsetTop;
+
+				if (window.pageYOffset + window.screen.availHeight / .9 > startPos) {
+					let t = window.pageYOffset + window.screen.availHeight / 2 - startPos;
+
+					blockAnim.style.transform = `translateX(${t * (-1)}px)`
+
+					blockRow.forEach(item => {
+						item.style.transform = `translateX(${t}px)`
+					})
+					blockRowTwo.forEach(item => {
+						item.style.transform = `translateX(${t * (-1)}px)`
+					})
+				}
+			})
+
+		}
+	}
+	animateCircleFooter();
+
+	// function brend tab
+
+	function brendTab() {
+		const btn = document.querySelectorAll('.brend-btn');
+		const box = document.querySelectorAll('.brend-container');
+		if (btn && box) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					let dataArr = item.getAttribute('data-brand');
+					let id = document.getElementById(dataArr);
+					btn.forEach(e => {
+						e.classList.remove('--active');
+					})
+					box.forEach(e => {
+						e.classList.remove('--active')
+					})
+					id.classList.add('--active')
+					item.classList.add('--active')
+				})
+			})
+		}
+	}
+	brendTab();
 })
