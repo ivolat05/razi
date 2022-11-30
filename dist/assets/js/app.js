@@ -220,4 +220,57 @@ $(() => {
 	}
 
 	mainSwaiper()
+	// catalog swiper
+	function catalogSwiper() {
+		const swiperBox = document.querySelector('.catalog-swiper');
+		if (swiperBox) {
+			const swiper = new Swiper('.catalog-swiper', {
+
+				slidesPerView: 4,
+				slidesPerColumn: 1,
+				spaceBetween: 20,
+				navigation: {
+					nextEl: '.catalog-button-next',
+					prevEl: '.catalog-button-prev',
+				},
+
+			});
+			const btn = document.querySelectorAll('.catalog-btn');
+			const catalogBox = document.querySelectorAll('.catalog-box-container');
+			if (btn && catalogBox) {
+				btn.forEach(item => {
+					if (item.classList.contains('--active')) {
+						let dataArr = item.getAttribute('data-catalog');
+						catalogBox.forEach(e => {
+							if (e.classList.contains(dataArr)) {
+								e.classList.add('--active')
+							} else {
+								e.classList.remove('--active')
+							}
+						})
+						swiper.updateSlides()
+					}
+
+					item.addEventListener('click', () => {
+						let dataArr = item.getAttribute('data-catalog');
+						btn.forEach(i => {
+							i.classList.remove('--active')
+						})
+						item.classList.add('--active')
+						catalogBox.forEach(e => {
+							if (e.classList.contains(dataArr)) {
+								e.classList.add('--active')
+							} else {
+								e.classList.remove('--active')
+							}
+						})
+						swiper.updateSlides()
+					})
+				})
+			}
+		}
+	}
+	catalogSwiper();
+
+
 })
