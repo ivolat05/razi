@@ -23,7 +23,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
-    <title>Главная страница</title>
+    <title>Каталог</title>
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
@@ -166,7 +166,810 @@
     			</div>
     		</div>
     	</header>
-    
+    	<div class="bread bread-padding">
+    		<div class="container">
+    			<ul class="bread-list">
+    				<li class="bread-list-inner">
+    					<a href="index.html" class="bread-list-link">
+    						главная
+    					</a>
+    				</li>
+    				<li class="bread-list-inner">
+    					<a href="#" class="bread-list-link">
+    						каталог
+    					</a>
+    				</li>
+    				<li class="bread-list-inner">
+    					парфюмерия
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
+    	<section class="panel">
+    		<div class="container">
+    			<div class="panel-wrapp">
+    				<div class="panel-right">
+    					<button class="catalog-accordion-btn --active">
+    						цена, руб.
+    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
+    					</button>
+    					<div class="catalog-accordion-box">
+    						<div class="catalog-accordion-wrapp">
+    							<div class="filter__slaider-box">
+    								<div id='filter-slaider-line' class="filter-slaider"></div>
+    							</div>
+    							<div class="filter__price-row">
+    								<div class="filter__num-box">
+    									<span class="filter__num-text">от</span>
+    									<input id='filter-slaider-1' class="filter__price-input" type="number" min='0'
+    										max='9999'>
+    								</div>
+    								<div class="filter__num-box">
+    									<span class="filter__num-text">до</span>
+    									<input id='filter-slaider-2' class="filter__price-input" type="number" min='0'
+    										max='9999'>
+    								</div>
+    	
+    							</div>
+    	
+    						</div>
+    					</div>
+    					<button class="catalog-accordion-btn ">
+    						применение
+    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
+    					</button>
+    					<div class="catalog-accordion-box">
+    						<div class="catalog-accordion-wrapp">
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input">
+    								<span class="catalog-label-span">
+    									Турция
+    								</span>
+    							</label>
+    						</div>
+    					</div>
+    					<button class="catalog-accordion-btn ">
+    						тип фасовки
+    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
+    					</button>
+    					<div class="catalog-accordion-box">
+    						<div class="catalog-accordion-wrapp">
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input">
+    								<span class="catalog-label-span">
+    									Турция
+    								</span>
+    							</label>
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input">
+    								<span class="catalog-label-span">
+    									Китай
+    								</span>
+    							</label>
+    							<button class="catalog-acc-btn">
+    								показать еще
+    							</button>
+    						</div>
+    					</div>
+    					<button class="catalog-accordion-btn --active">
+    						производители
+    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
+    					</button>
+    					<div class="catalog-accordion-box">
+    						<div class="catalog-accordion-wrapp">
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input" checked>
+    								<span class="catalog-label-span">
+    									Турция
+    								</span>
+    							</label>
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input" checked>
+    								<span class="catalog-label-span">
+    									Китай
+    								</span>
+    							</label>
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input">
+    								<span class="catalog-label-span">
+    									Германия
+    								</span>
+    							</label>
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input">
+    								<span class="catalog-label-span">
+    									Нидерланды
+    								</span>
+    							</label>
+    							<label class="catalog-label">
+    								<input type="checkbox" class="catalog-label-input" checked>
+    								<span class="catalog-label-span">
+    									Украина
+    								</span>
+    							</label>
+    							<button class="catalog-acc-btn">
+    								показать еще
+    							</button>
+    						</div>
+    					</div>
+    					<div class="catalog-menu-wrapper">
+    	
+    						<button class="btn-reset">
+    							Очистить фильтр
+    						</button>
+    					</div>
+    				</div>
+    	
+    				<div class="panel-left">
+    					<h3 class="panel-title">
+    						Женская парфюмерия
+    					</h3>
+    					<div class="panel-baner">
+    						<img src="./assets/img/panel/panel.jpg" alt="" class="panel-img">
+    					</div>
+    					<div class="panel-left-head">
+    	
+    					</div>
+    					<div class="panel-catalog">
+    	
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Марк Антуан <br>Барруа B683 Унисекс
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									3 950 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									5 800 ₽
+    								</div>
+    							</div>
+    						</a>
+    	
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-2.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-30%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Antonio Banderas Queen
+    								of Seduction
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Name
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									74
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    	
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									12 580 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									15 960 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Mancera Cedrat Boise
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Название серии
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									5
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									1 800 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									2 400 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-4.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-40%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Antonio Banderas Blue Seduction for WomenAntonio
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									80 мл
+    								</li>
+    	
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									5 400 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									8 200 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Марк Антуан <br>Барруа B683 Унисекс
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									3 950 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									5 800 ₽
+    								</div>
+    							</div>
+    						</a>
+    	
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-2.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-30%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Antonio Banderas Queen
+    								of Seduction
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Name
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									74
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    	
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									12 580 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									15 960 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Mancera Cedrat Boise
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Название серии
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									5
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									1 800 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									2 400 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-4.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-40%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Antonio Banderas Blue Seduction for WomenAntonio
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									80 мл
+    								</li>
+    	
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									5 400 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									8 200 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    	
+    						<a href="#" class="catalog-box">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Марк Антуан <br>Барруа B683 Унисекс
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    			10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									3 950 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									5 800 ₽
+    								</div>
+    							</div>
+    						</a>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
     	<section class="score score-padding">
     		<div class="container">
     			<div class="score-wrapp">

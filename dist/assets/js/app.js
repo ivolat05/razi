@@ -460,4 +460,89 @@ $(() => {
 		$(`#form-popup`).validate(validate);
 	}
 	validationForm();
+
+	// accardion
+	function accordion(btnAccordion) {
+		const btn = document.querySelectorAll(`${btnAccordion}`);
+		if (btn) {
+			btn.forEach(item => {
+				if (item.classList.contains('--active')) {
+					const panel = item.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+				}
+
+				item.addEventListener('click', () => {
+					item.classList.toggle("--active");
+					const panel = item.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+				})
+
+			})
+		}
+	}
+	accordion('.catalog-accordion-btn');
+
+	// фильтр ползунок
+	// ползунок выбора цен
+	// idLine id div ползунка
+	//minStart начальное занчение ползунта при старте
+	//maxStart начальное занчение  второго ползунта при старте
+	// min минимальное значение
+	// max максимальное занчение
+	// idNumOne id отоброжения первного числа
+	// idNumTwo id отоброжение второго числа
+	// btnReset кнопка сброса фильтра
+	filterPrice('filter-slaider-line', '.btn-reset', 150, 5480, 0, 10000, 'filter-slaider-1', 'filter-slaider-2')
+	function filterPrice(idLine, btnReset, minStart, maxStart, min, max, idNumOne, idNumTwo) {
+		let filterSlaiderLine = document.getElementById(`${idLine}`);
+		if (filterSlaiderLine) {
+			noUiSlider.create(filterSlaiderLine, {
+				start: [minStart, maxStart],
+				connect: true,
+				step: 1,
+				range: {
+					'min': min,
+					'max': max
+
+				}
+			});
+
+			let filterSlaiderOne = document.getElementById(`${idNumOne}`);
+			let filterSlaiderTwo = document.getElementById(`${idNumTwo}`);
+			let filterSlaiderLineRemove = document.querySelectorAll(`${btnReset}`)
+			let filterList = [filterSlaiderOne, filterSlaiderTwo];
+
+			filterSlaiderLine.noUiSlider.on('update', function (values, handle) {
+				filterList[handle].value = Math.round(values[handle]);
+			});
+
+			const setfilterSlaider = (i, value) => {
+				let arr = [null, null];
+				arr[i] = value;
+				filterSlaiderLine.noUiSlider.set(arr);
+			}
+
+			filterList.forEach((item, index) => {
+				item.addEventListener('change', (e) => {
+					setfilterSlaider(index, e.currentTarget.value);
+
+				})
+			})
+			filterSlaiderLineRemove.forEach((item) => {
+				item.addEventListener('click', function () {
+					filterSlaiderLine.noUiSlider.set([minStart, maxStart]);
+				});
+			});
+
+
+		}
+	}
 })
