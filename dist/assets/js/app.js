@@ -293,8 +293,26 @@ $(() => {
 	}
 	blogSwiper();
 
+	// map swiper
+	function mapSwiper() {
+		const mapBox = document.querySelectorAll('.map-slaider');
+		if (mapBox) {
+			mapBox.forEach(item => {
+				const swiper = new Swiper(item, {
+					loop: true,
+					slidesPerView: 1,
+					slidesPerColumn: 1,
+					navigation: {
+						nextEl: '.map-button-prev',
+						prevEl: '.map-button-next',
+					},
 
+				});
+			})
 
+		}
+	}
+	mapSwiper()
 	// start анимации
 
 	function animateCircleFooter() {
@@ -309,8 +327,9 @@ $(() => {
 			window.addEventListener('scroll', () => {
 				let startPos = start.offsetTop;
 				let brendWidth = document.querySelector('.brend-title-row').offsetWidth - blockAnim.offsetWidth;
-				if (window.pageYOffset + window.screen.availHeight > startPos) {
+				if (window.pageYOffset + window.screen.availHeight > startPos && start.offsetHeight + startPos > window.pageYOffset) {
 					let t = window.pageYOffset + window.screen.availHeight - startPos;
+					let lengthBox = start.offsetHeight + window.screen.availHeight;
 					if (t < 0) {
 						blockAnim.style.transform = `translateX(0px)`
 					} else if (t > brendWidth) {
@@ -318,13 +337,32 @@ $(() => {
 					} else {
 						blockAnim.style.transform = `translateX(${t * (-1)}px)`
 					}
-					console.log(brendWidth)
-					console.log(t)
+
 					blockRow.forEach(item => {
+
+
+						if (lengthBox > item.innerHTML.length) {
+							let num = item.innerHTML.length;
+							while (lengthBox > num) {
+								let box = item.cloneNode(true);
+								item.appendChild(box)
+								num = item.innerHTML.length
+							}
+						}
+
 						item.style.transform = `translateX(${t}px)`
 					})
 					blockRowTwo.forEach(item => {
+						if (lengthBox > item.innerHTML.length) {
+							let num = item.innerHTML.length;
+							while (lengthBox > num) {
+								let box = item.cloneNode(true);
+								item.appendChild(box)
+								num = item.innerHTML.length
+							}
+						}
 						item.style.transform = `translateX(${t * (-1)}px)`
+
 					})
 				}
 			})
