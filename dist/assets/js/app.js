@@ -274,6 +274,24 @@ $(() => {
 	}
 	catalogSwiper();
 
+	// blog swiper
+	function blogSwiper() {
+		const blogBox = document.querySelector('.blog-swiper');
+		if (blogBox) {
+			const swiper = new Swiper(blogBox, {
+				loop: true,
+				slidesPerView: 4,
+				slidesPerColumn: 1,
+				spaceBetween: 20,
+				navigation: {
+					nextEl: '.blog-button-next',
+					prevEl: '.blog-button-prev',
+				},
+
+			});
+		}
+	}
+	blogSwiper();
 
 
 
@@ -290,12 +308,18 @@ $(() => {
 
 			window.addEventListener('scroll', () => {
 				let startPos = start.offsetTop;
-
-				if (window.pageYOffset + window.screen.availHeight / .9 > startPos) {
-					let t = window.pageYOffset + window.screen.availHeight / 2 - startPos;
-
-					blockAnim.style.transform = `translateX(${t * (-1)}px)`
-
+				let brendWidth = document.querySelector('.brend-title-row').offsetWidth - blockAnim.offsetWidth;
+				if (window.pageYOffset + window.screen.availHeight > startPos) {
+					let t = window.pageYOffset + window.screen.availHeight - startPos;
+					if (t < 0) {
+						blockAnim.style.transform = `translateX(0px)`
+					} else if (t > brendWidth) {
+						blockAnim.style.transform = `translateX(${brendWidth * (-1)}px)`
+					} else {
+						blockAnim.style.transform = `translateX(${t * (-1)}px)`
+					}
+					console.log(brendWidth)
+					console.log(t)
 					blockRow.forEach(item => {
 						item.style.transform = `translateX(${t}px)`
 					})
