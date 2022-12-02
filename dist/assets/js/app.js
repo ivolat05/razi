@@ -91,7 +91,13 @@ $(() => {
 				item.addEventListener('click', selectChoose)
 			})
 
-			function selectToggle() {
+			function selectToggle(e) {
+				e.stopPropagation();
+				const selectList = document.querySelectorAll('.select');
+
+				selectList.forEach(item => {
+					item.classList.remove('is-active');
+				})
 				this.parentElement.classList.toggle('is-active');
 			}
 
@@ -102,11 +108,37 @@ $(() => {
 				currentText.innerText = text;
 				select.classList.remove('is-active');
 			}
+			document.addEventListener('click', (event) => {
+				let selectList = document.querySelectorAll('.select');
+				if (selectList) {
+					if (event.target != "selectItem") {
+						selectList.forEach(item => {
+							item.classList.remove('is-active');
+						})
+
+					}
+
+				}
+			})
+
 		}
 
 	}
 	select();
+	// panel sort
+	function panelSort() {
+		const btn = document.querySelectorAll('.panel-sort-btn');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				btn.forEach(e => {
+					e.classList.add('--deactive')
+				})
+				item.classList.remove('--deactive')
+			})
+		})
 
+	}
+	panelSort()
 	// слайдер main
 	function mainSwaiper() {
 		let mainSlaiderBox = document.querySelectorAll('.main-wrapp')
@@ -488,7 +520,7 @@ $(() => {
 			})
 		}
 	}
-	accordion('.catalog-accordion-btn');
+	accordion('.panel-accordion-btn');
 
 	// фильтр ползунок
 	// ползунок выбора цен
@@ -500,7 +532,7 @@ $(() => {
 	// idNumOne id отоброжения первного числа
 	// idNumTwo id отоброжение второго числа
 	// btnReset кнопка сброса фильтра
-	filterPrice('filter-slaider-line', '.btn-reset', 150, 5480, 0, 10000, 'filter-slaider-1', 'filter-slaider-2')
+	filterPrice('filter-slaider-line', '.btn-reset', 114, 24850, 0, 40000, 'filter-slaider-1', 'filter-slaider-2')
 	function filterPrice(idLine, btnReset, minStart, maxStart, min, max, idNumOne, idNumTwo) {
 		let filterSlaiderLine = document.getElementById(`${idLine}`);
 		if (filterSlaiderLine) {
@@ -545,4 +577,23 @@ $(() => {
 
 		}
 	}
+
+	// btn rezet
+	function filterRezet() {
+		const btn = document.querySelector('.panel-btn-rezet');
+		const panelLabelInput = document.querySelectorAll('.panel-label-input');
+		if (btn && panelLabelInput) {
+			btn.addEventListener('click', () => {
+				panelLabelInput.forEach(item => {
+					if (item.checked) {
+						item.checked = false;
+					}
+				})
+			})
+		}
+
+	}
+	filterRezet()
+
+
 })

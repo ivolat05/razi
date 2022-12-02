@@ -185,118 +185,373 @@
     			</ul>
     		</div>
     	</div>
-    	<section class="panel">
+    	<section class="panel panel-padding">
     		<div class="container">
     			<div class="panel-wrapp">
     				<div class="panel-right">
-    					<button class="catalog-accordion-btn --active">
-    						цена, руб.
-    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
-    					</button>
-    					<div class="catalog-accordion-box">
-    						<div class="catalog-accordion-wrapp">
-    							<div class="filter__slaider-box">
-    								<div id='filter-slaider-line' class="filter-slaider"></div>
-    							</div>
-    							<div class="filter__price-row">
-    								<div class="filter__num-box">
-    									<span class="filter__num-text">от</span>
-    									<input id='filter-slaider-1' class="filter__price-input" type="number" min='0'
-    										max='9999'>
-    								</div>
-    								<div class="filter__num-box">
-    									<span class="filter__num-text">до</span>
-    									<input id='filter-slaider-2' class="filter__price-input" type="number" min='0'
-    										max='9999'>
-    								</div>
-    	
-    							</div>
-    	
-    						</div>
-    					</div>
-    					<button class="catalog-accordion-btn ">
-    						применение
-    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
-    					</button>
-    					<div class="catalog-accordion-box">
-    						<div class="catalog-accordion-wrapp">
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input">
-    								<span class="catalog-label-span">
-    									Турция
-    								</span>
-    							</label>
-    						</div>
-    					</div>
-    					<button class="catalog-accordion-btn ">
-    						тип фасовки
-    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
-    					</button>
-    					<div class="catalog-accordion-box">
-    						<div class="catalog-accordion-wrapp">
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input">
-    								<span class="catalog-label-span">
-    									Турция
-    								</span>
-    							</label>
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input">
-    								<span class="catalog-label-span">
-    									Китай
-    								</span>
-    							</label>
-    							<button class="catalog-acc-btn">
-    								показать еще
-    							</button>
-    						</div>
-    					</div>
-    					<button class="catalog-accordion-btn --active">
-    						производители
-    						<img src="./assets/img/catalog/icon.svg" alt="" class="catalog-accordinon-img">
-    					</button>
-    					<div class="catalog-accordion-box">
-    						<div class="catalog-accordion-wrapp">
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input" checked>
-    								<span class="catalog-label-span">
-    									Турция
-    								</span>
-    							</label>
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input" checked>
-    								<span class="catalog-label-span">
-    									Китай
-    								</span>
-    							</label>
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input">
-    								<span class="catalog-label-span">
-    									Германия
-    								</span>
-    							</label>
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input">
-    								<span class="catalog-label-span">
-    									Нидерланды
-    								</span>
-    							</label>
-    							<label class="catalog-label">
-    								<input type="checkbox" class="catalog-label-input" checked>
-    								<span class="catalog-label-span">
-    									Украина
-    								</span>
-    							</label>
-    							<button class="catalog-acc-btn">
-    								показать еще
-    							</button>
-    						</div>
-    					</div>
-    					<div class="catalog-menu-wrapper">
-    	
-    						<button class="btn-reset">
-    							Очистить фильтр
+    					<div class="panel-right-box">
+    						<button class="panel-accordion-btn --fix --active">
+    							цена, руб.
+    							<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    								xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    								<image id="down" width="10" height="6"
+    									xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    								</image>
+    							</svg>
     						</button>
+    						<div class="panel-accordion-box ">
+    							<div class="panel-accordion-wrapp">
+    								<div class="filter__slaider-box">
+    									<div id='filter-slaider-line' class="filter-slaider"></div>
+    								</div>
+    								<div class="filter__price-row">
+    									<div class="filter__num-box">
+    										<span class="filter__num-text">от</span>
+    										<input id='filter-slaider-1' class="filter__price-input" type="number" min='0'
+    											max='9999'>
+    									</div>
+    									<div class="filter__num-box">
+    										<span class="filter__num-text">до</span>
+    										<input id='filter-slaider-2' class="filter__price-input" type="number" min='0'
+    											max='9999'>
+    									</div>
+    	
+    								</div>
+    	
+    							</div>
+    						</div>
+    						<button class="panel-accordion-btn --active">
+    							найти бренды
+    							<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    								xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    								<image id="down" width="10" height="6"
+    									xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    								</image>
+    							</svg>
+    						</button>
+    						<div class="panel-accordion-box">
+    							<div class="panel-accordion-wrapp">
+    								<div class="panel-accodion-conatainer">
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Abercrombie Fitch <span class="panel-label-sum">
+    												11
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input" checked>
+    										<span class="panel-label-span">
+    											Adidas <span class="panel-label-sum">
+    												17
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input" checked>
+    										<span class="panel-label-span">
+    											Adidas Original<span class="panel-label-sum">
+    												2
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Afhan <span class="panel-label-sum">
+    												23
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Agent Provocateur <span class="panel-label-sum">
+    												4
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Ajmal<span class="panel-label-sum">
+    												5
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Abercrombie Fitch <span class="panel-label-sum">
+    												11
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas <span class="panel-label-sum">
+    												17
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas Original<span class="panel-label-sum">
+    												2
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Afhan <span class="panel-label-sum">
+    												23
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Agent Provocateur <span class="panel-label-sum">
+    												4
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Ajmal<span class="panel-label-sum">
+    												5
+    											</span>
+    										</span>
+    									</label>
+    								</div>
+    							</div>
+    						</div>
+    	
+    						<button class="panel-accordion-btn ">
+    							пол
+    							<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    								xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    								<image id="down" width="10" height="6"
+    									xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    								</image>
+    							</svg>
+    						</button>
+    						<div class="panel-accordion-box">
+    							<div class="panel-accordion-wrapp">
+    								<div class="panel-accodion-conatainer">
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Abercrombie Fitch <span class="panel-label-sum">
+    												11
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas <span class="panel-label-sum">
+    												17
+    											</span>
+    										</span>
+    									</label>
+    								</div>
+    							</div>
+    						</div>
+    	
+    						<button class="panel-accordion-btn ">
+    							для кого
+    							<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    								xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    								<image id="down" width="10" height="6"
+    									xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    								</image>
+    							</svg>
+    						</button>
+    						<div class="panel-accordion-box">
+    							<div class="panel-accordion-wrapp">
+    								<div class="panel-accodion-conatainer">
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Abercrombie Fitch <span class="panel-label-sum">
+    												11
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas <span class="panel-label-sum">
+    												17
+    											</span>
+    										</span>
+    									</label>
+    								</div>
+    							</div>
+    						</div>
+    	
+    						<button class="panel-accordion-btn ">
+    							объем
+    							<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    								xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    								<image id="down" width="10" height="6"
+    									xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    								</image>
+    							</svg>
+    						</button>
+    						<div class="panel-accordion-box">
+    							<div class="panel-accordion-wrapp">
+    								<div class="panel-accodion-conatainer">
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Abercrombie Fitch <span class="panel-label-sum">
+    												11
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas <span class="panel-label-sum">
+    												17
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas Original<span class="panel-label-sum">
+    												2
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Afhan <span class="panel-label-sum">
+    												23
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Agent Provocateur <span class="panel-label-sum">
+    												4
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Ajmal<span class="panel-label-sum">
+    												5
+    											</span>
+    										</span>
+    									</label>
+    								</div>
+    							</div>
+    						</div>
+    	
+    						<button class="panel-accordion-btn ">
+    							тип аромата
+    							<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    								xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    								<image id="down" width="10" height="6"
+    									xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    								</image>
+    							</svg>
+    						</button>
+    						<div class="panel-accordion-box">
+    							<div class="panel-accordion-wrapp">
+    								<div class="panel-accodion-conatainer">
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Abercrombie Fitch <span class="panel-label-sum">
+    												11
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas <span class="panel-label-sum">
+    												17
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Adidas Original<span class="panel-label-sum">
+    												2
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Afhan <span class="panel-label-sum">
+    												23
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Agent Provocateur <span class="panel-label-sum">
+    												4
+    											</span>
+    										</span>
+    									</label>
+    									<label class="panel-label">
+    										<input type="checkbox" class="panel-label-input">
+    										<span class="panel-label-span">
+    											Ajmal<span class="panel-label-sum">
+    												5
+    											</span>
+    										</span>
+    									</label>
+    								</div>
+    							</div>
+    						</div>
+    	
+    	
+    						<div class="panel-menu-wrapper">
+    	
+    							<button class="btn-reset panel-btn-rezet">
+    								Очистить фильтр
+    							</button>
+    						</div>
+    					</div>
+    	
+    					<div class="panel-right-page">
+    						<a href="#" class="panel-page-link">
+    							Мужская парфюмерия
+    						</a>
+    						<a href="#" class="panel-page-link">
+    							Женская парфюмерия
+    						</a>
+    						<a href="#" class="panel-page-link">
+    							Для детей
+    						</a>
+    						<a href="#" class="panel-page-link">
+    							Разлив духов
+    						</a>
+    						<a href="#" class="panel-page-link">
+    							Духи на заказ
+    						</a>
+    						<a href="#" class="panel-page-link">
+    							Бренды
+    						</a>
     					</div>
     				</div>
     	
@@ -306,13 +561,157 @@
     					</h3>
     					<div class="panel-baner">
     						<img src="./assets/img/panel/panel.jpg" alt="" class="panel-img">
+    						<div class="panel-baner-box">
+    							<img src="./assets/img/panel/panel-box.svg" alt="" class="panel-baner-img">
+    							<p class="panel-baner-text">
+    								Головокружительный аромат
+    								изысканного ириса
+    							</p>
+    							<a href="#" class="panel-banner-link btn">
+    								купить
+    							</a>
+    						</div>
     					</div>
     					<div class="panel-left-head">
+    						<div class="panel-head-title">
+    							сортировка:
+    						</div>
     	
+    						<div class="select panel-sort">
+    							<div class="select__header panel-sort-btn">
+    								<span class="select__current">
+    									Цена
+    								</span>
+    								<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<image id="down" width="10" height="6"
+    										xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    									</image>
+    								</svg>
+    								<svg class="select-arrow-deactive" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<g>
+    										<g opacity=".15">
+    											<image width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAXNSR0IArs4c6QAAAGtJREFUGFddzzEKgwAMBdBnhU6FHsGpR+hY1y7iLXqo7p6gIB09gBdw8CrSEkGI/ikkj5AUOKFBj8U+JWoMBa6Y8MUr4TPeeKIKGLnjk3Bs6vBAi3GDR3zJKIYZZhz1umk7+Qijf8MPc/7rD3YfEgxGiDTvAAAAAElFTkSuQmCC" />
+    										</g>
+    									</g>
+    								</svg>
+    							</div>
+    							<div class="select__body">
+    								<div class="select__item">
+    									Цена
+    								</div>
+    								<div class="select__item">
+    									Цена
+    								</div>
+    								<div class="select__item">
+    									Цена
+    								</div>
+    							</div>
+    						</div>
+    						<div class="select panel-sort">
+    							<div class="select__header  panel-sort-btn --deactive">
+    								<span class="select__current">
+    									Популярность
+    								</span>
+    								<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<image id="down" width="10" height="6"
+    										xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    									</image>
+    								</svg>
+    								<svg class="select-arrow-deactive" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<g>
+    										<g opacity=".15">
+    											<image width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAXNSR0IArs4c6QAAAGtJREFUGFddzzEKgwAMBdBnhU6FHsGpR+hY1y7iLXqo7p6gIB09gBdw8CrSEkGI/ikkj5AUOKFBj8U+JWoMBa6Y8MUr4TPeeKIKGLnjk3Bs6vBAi3GDR3zJKIYZZhz1umk7+Qijf8MPc/7rD3YfEgxGiDTvAAAAAElFTkSuQmCC" />
+    										</g>
+    									</g>
+    								</svg>
+    							</div>
+    							<div class="select__body">
+    								<div class="select__item">
+    									Популярность
+    								</div>
+    								<div class="select__item">
+    									Популярность
+    								</div>
+    								<div class="select__item">
+    									Популярность
+    								</div>
+    							</div>
+    						</div>
+    						<div class="select panel-sort">
+    							<div class="select__header   panel-sort-btn --deactive">
+    								<span class="select__current">
+    									Наименование
+    								</span>
+    								<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<image id="down" width="10" height="6"
+    										xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    									</image>
+    								</svg>
+    								<svg class="select-arrow-deactive" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<g>
+    										<g opacity=".15">
+    											<image width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAXNSR0IArs4c6QAAAGtJREFUGFddzzEKgwAMBdBnhU6FHsGpR+hY1y7iLXqo7p6gIB09gBdw8CrSEkGI/ikkj5AUOKFBj8U+JWoMBa6Y8MUr4TPeeKIKGLnjk3Bs6vBAi3GDR3zJKIYZZhz1umk7+Qijf8MPc/7rD3YfEgxGiDTvAAAAAElFTkSuQmCC" />
+    										</g>
+    									</g>
+    								</svg>
+    							</div>
+    							<div class="select__body">
+    								<div class="select__item">
+    									Оценка
+    								</div>
+    								<div class="select__item">
+    									Оценка
+    								</div>
+    								<div class="select__item">
+    									Оценка
+    								</div>
+    							</div>
+    						</div>
+    						<div class="select panel-sort">
+    							<div class="select__header   panel-sort-btn --deactive">
+    								<span class="select__current">
+    									Оценка
+    								</span>
+    								<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<image id="down" width="10" height="6"
+    										xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==">
+    									</image>
+    								</svg>
+    								<svg class="select-arrow-deactive" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6" viewBox="0 0 10 6">
+    									<g>
+    										<g opacity=".15">
+    											<image width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAXNSR0IArs4c6QAAAGtJREFUGFddzzEKgwAMBdBnhU6FHsGpR+hY1y7iLXqo7p6gIB09gBdw8CrSEkGI/ikkj5AUOKFBj8U+JWoMBa6Y8MUr4TPeeKIKGLnjk3Bs6vBAi3GDR3zJKIYZZhz1umk7+Qijf8MPc/7rD3YfEgxGiDTvAAAAAElFTkSuQmCC" />
+    										</g>
+    									</g>
+    								</svg>
+    							</div>
+    							<div class="select__body">
+    								<div class="select__item">
+    									Оценка
+    								</div>
+    								<div class="select__item">
+    									Оценка
+    								</div>
+    								<div class="select__item">
+    									Оценка
+    								</div>
+    							</div>
+    						</div>
     					</div>
     					<div class="panel-catalog">
     	
-    	
     						<a href="#" class="catalog-box">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
@@ -966,6 +1365,43 @@
     							</div>
     						</a>
     					</div>
+    					<ul class="navigation-list navigation-padding">
+    						<li class="navigation-list-inner">
+    							<a href="#" class=" navigation-arrow  slaid-btn bnt-hover">
+    								<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img img-deactive-hover">
+    								<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    							</a>
+    					
+    					
+    					
+    						</li>
+    						<li class="navigation-list-inner">
+    							<a href="#" class="navigation-list-link --active">
+    								1
+    							</a>
+    						</li>
+    						<li class="navigation-list-inner">
+    							<a href="#" class="navigation-list-link">
+    								2
+    							</a>
+    						</li>
+    						<li class="navigation-list-inner">
+    							<a href="#" class="navigation-list-link">
+    								3
+    							</a>
+    						</li>
+    						<li class="navigation-list-inner">
+    							<a href="#" class="navigation-list-link">
+    								4
+    							</a>
+    						</li>
+    						<li class="navigation-list-inner">
+    							<a href="#" class=" navigation-arrow slaid-btn slaid-button-next bnt-hover">
+    								<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img img-deactive-hover">
+    								<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    							</a>
+    						</li>
+    					</ul>
     				</div>
     			</div>
     		</div>
