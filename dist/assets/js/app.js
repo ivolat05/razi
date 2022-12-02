@@ -349,6 +349,49 @@ $(() => {
 		}
 	}
 	mapSwiper()
+
+	//card slaider
+	function slaiderCard() {
+		let clenadrBoxONe = document.querySelector('.card-body-swiper');
+		if (clenadrBoxONe) {
+			const sliderThumbs = new Swiper('.card-body-swiper', { // ищем слайдер превью по селектору
+				direction: 'vertical',
+				slidesPerView: 3,
+				loop: true,
+				slidesPerColumn: 1,
+				grabCursor: true,
+				autoHeight: true,
+				autoScrollOffset: 1,
+				initialSlide: 1,
+				spaceBetween: 10,
+				centeredSlides: true,
+				centeredSlidesBounds: true,
+
+
+			});
+
+			const sliderImages = new Swiper('.card-head', {
+				slidesPerView: 1,
+				loop: true,
+				initialSlide: 1,
+				navigation: {
+					nextEl: '.card-slider__next',
+					prevEl: '.card-slider__prev'
+				},
+				grabCursor: true,
+				thumbs: {
+					swiper: sliderThumbs,
+					autoScrollOffset: 1,
+				},
+				autoHeight: true,
+
+			});
+
+		}
+	}
+
+	slaiderCard()
+
 	// start анимации
 
 	function animateCircleFooter() {
@@ -407,15 +450,15 @@ $(() => {
 	}
 	animateCircleFooter();
 
-	// function brend tab
+	// function open tab
 
-	function brendTab() {
-		const btn = document.querySelectorAll('.brend-btn');
-		const box = document.querySelectorAll('.brend-container');
+	function openTab(btnOpen, tabBox, dataAtribute) {
+		const btn = document.querySelectorAll(`${btnOpen}`);
+		const box = document.querySelectorAll(`${tabBox}`);
 		if (btn && box) {
 			btn.forEach(item => {
 				item.addEventListener('click', () => {
-					let dataArr = item.getAttribute('data-brand');
+					let dataArr = item.getAttribute(`${dataAtribute}`);
 					let id = document.getElementById(dataArr);
 					btn.forEach(e => {
 						e.classList.remove('--active');
@@ -429,69 +472,8 @@ $(() => {
 			})
 		}
 	}
-	brendTab();
-
-	$('.open-modal, .open-modal-2').magnificPopup({
-		type: 'inline',
-		showCloseBtn: false,
-		mainClass: 'mfp-fade'
-	});
-	//popup close
-	function closePopup(closeBtn) {
-		let popupClose = document.querySelectorAll(`.${closeBtn}`);
-		if (popupClose) {
-			popupClose.forEach((item) => {
-				item.addEventListener('click', () => {
-					$.magnificPopup.close();
-				})
-			})
-		}
-
-
-	}
-	closePopup('popup-close');
-	closePopup('popup-btn-close');
-	// маска телефона
-	$('.mask-tell').inputmask("+7 (999) 999-9999", {
-		definitions: {
-			"X": {
-				validator: "[7-8]",
-			}
-		},
-		oncomplete: function () {
-			$(this).val('+7' + $(this).val().substring(2));
-		}
-	});
-
-	// валидация
-	function validationForm() {
-		// кол-во символов ввода телефона
-		$.validator.addMethod("minlenghtphone", function (value, element) {
-			return value.replace(/\D+/g, '').length > 10;
-		});
-
-		var validate = {
-			rules: {
-				name: {
-					required: true,
-					minlength: 3
-
-				},
-				phone: {
-					required: true,
-					minlenghtphone: true
-				},
-			},
-			errorPlacement: function (error, element) {
-				return;
-			},
-
-		};
-
-
-		$(`#form-popup`).validate(validate);
-	}
-	validationForm();
+	openTab('.brend-btn', '.brend-container', 'data-brand');
+	openTab('.card-tab-btn', '.card-tab', 'data-card');
 
 	// accardion
 	function accordion(btnAccordion) {
@@ -596,4 +578,80 @@ $(() => {
 	filterRezet()
 
 
+	// маска телефона
+	$('.mask-tell').inputmask("+7 (999) 999-9999", {
+		definitions: {
+			"X": {
+				validator: "[7-8]",
+			}
+		},
+		oncomplete: function () {
+			$(this).val('+7' + $(this).val().substring(2));
+		}
+	});
+
+	// валидация
+	function validationForm() {
+		// кол-во символов ввода телефона
+		$.validator.addMethod("minlenghtphone", function (value, element) {
+			return value.replace(/\D+/g, '').length > 10;
+		});
+
+		var validate = {
+			rules: {
+				name: {
+					required: true,
+					minlength: 3
+
+				},
+				phone: {
+					required: true,
+					minlenghtphone: true
+				},
+			},
+			errorPlacement: function (error, element) {
+				return;
+			},
+
+		};
+
+
+		$(`#form-popup`).validate(validate);
+	}
+	validationForm();
+	//popup
+	$('.open-modal, .open-modal-2').magnificPopup({
+		type: 'inline',
+		showCloseBtn: false,
+		mainClass: 'mfp-fade'
+	});
+	//popup close
+	function closePopup(closeBtn) {
+		let popupClose = document.querySelectorAll(`.${closeBtn}`);
+		if (popupClose) {
+			popupClose.forEach((item) => {
+				item.addEventListener('click', () => {
+					$.magnificPopup.close();
+				})
+			})
+		}
+
+
+	}
+	closePopup('popup-close');
+	closePopup('popup-btn-close');
+
+	// galary
+
+	$('.gallery-open').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		mainClass: 'mfp-galary',
+		tLoading: 'Загрузка изоброжения',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		}
+	});
 })
