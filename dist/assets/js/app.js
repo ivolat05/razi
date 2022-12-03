@@ -363,6 +363,69 @@ $(() => {
 		}
 	}
 	mapSwiper()
+	function mapSwiperTwo() {
+		const mapBox = document.querySelectorAll('.map-slaider-two');
+		if (mapBox) {
+			mapBox.forEach(item => {
+				const swiper = new Swiper(item, {
+					loop: true,
+					slidesPerView: 1,
+					slidesPerColumn: 1,
+					navigation: {
+						nextEl: '.map-button-prev-two',
+						prevEl: '.map-button-next-two',
+					},
+
+				});
+			})
+
+		}
+	}
+	mapSwiperTwo()
+
+	function mapSwiperThree() {
+		const mapBox = document.querySelectorAll('.map-slaider-three');
+		if (mapBox) {
+			mapBox.forEach(item => {
+				const swiper = new Swiper(item, {
+					loop: true,
+					slidesPerView: 4,
+					centeredSlides: true,
+					slidesPerColumn: 1,
+					spaceBetween: 8,
+					navigation: {
+						nextEl: '.map-button-prev-three',
+						prevEl: '.map-button-next-three',
+					},
+
+				});
+			})
+
+		}
+	}
+	mapSwiperThree()
+
+	function mapSwiperFour() {
+		const mapBox = document.querySelectorAll('.map-slaider-four');
+		if (mapBox) {
+			mapBox.forEach(item => {
+				const swiper = new Swiper(item, {
+					loop: true,
+					slidesPerView: 4,
+					spaceBetween: 8,
+					slidesPerColumn: 1,
+					centeredSlides: true,
+					navigation: {
+						nextEl: '.map-button-prev-four',
+						prevEl: '.map-button-next-four',
+					},
+
+				});
+			})
+
+		}
+	}
+	mapSwiperFour()
 
 	//card slaider
 	function slaiderCard() {

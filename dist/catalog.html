@@ -1443,10 +1443,10 @@
     	<section class="maps maps-padding">
     		<div class="container">
     			<div class="maps-head">
-    				<button class="maps-btn --active" data-map="one">
+    				<button class="maps-btn map-btn-switch --active" data-map="one">
     					ТЦ «АМБАР»
     				</button>
-    				<button class="maps-btn" data-map="two">
+    				<button class="maps-btn  map-btn-switch" data-map="two">
     					ТЦ «ГУДОК»
     				</button>
     			</div>
@@ -1491,19 +1491,22 @@
     								class="slaid-btn-img img-active-hover">
     						</button>
     					</div>
-    					<div class="map-slaider">
+    					<div class="map-slaider  gallery-open">
     						<div class="swiper-wrapper">
     							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								<a href="./assets/img/map/map-1.jpg" class="map-slaid-link">
+    									<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								</a>
     							</div>
     							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								<a href="./assets/img/map/map-2.jpg" class="map-slaid-link">
+    									<img src="./assets/img/map/map-2.jpg" alt="" class="map-slaid-img">
+    								</a>
     							</div>
     							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
-    							</div>
-    							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								<a href="./assets/img/map/map-3.jpg" class="map-slaid-link">
+    									<img src="./assets/img/map/map-3.jpg" alt="" class="map-slaid-img">
+    								</a>
     							</div>
     						</div>
     					</div>
@@ -1538,30 +1541,33 @@
     				</div>
     				<div class="map-slaider-box">
     					<div class="map-box-btn">
-    						<button class="slaid-btn bnt-hover map-button map-button-prev">
+    						<button class="slaid-btn bnt-hover map-button map-button-prev-two">
     							<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img img-deactive-hover">
     							<img src="./assets/img/catalog/arrow-hover-map.svg" alt=""
     								class="slaid-btn-img img-active-hover">
     						</button>
-    						<button class="slaid-btn slaid-button-next map-button  bnt-hover map-button-next">
+    						<button class="slaid-btn slaid-button-next map-button  bnt-hover map-button-next-two">
     							<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img  img-deactive-hover">
     							<img src="./assets/img/catalog/arrow-hover-map.svg" alt=""
     								class="slaid-btn-img img-active-hover">
     						</button>
     					</div>
-    					<div class="map-slaider">
+    					<div class="map-slaider-two  gallery-open">
     						<div class="swiper-wrapper">
     							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								<a href="./assets/img/map/map-1.jpg" class="map-slaid-link">
+    									<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								</a>
     							</div>
     							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								<a href="./assets/img/map/map-2.jpg" class="map-slaid-link">
+    									<img src="./assets/img/map/map-2.jpg" alt="" class="map-slaid-img">
+    								</a>
     							</div>
     							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
-    							</div>
-    							<div class="swiper-slide">
-    								<img src="./assets/img/map/map-1.jpg" alt="" class="map-slaid-img">
+    								<a href="./assets/img/map/map-3.jpg" class="map-slaid-link">
+    									<img src="./assets/img/map/map-3.jpg" alt="" class="map-slaid-img">
+    								</a>
     							</div>
     						</div>
     					</div>
@@ -1799,6 +1805,7 @@
     	ymaps.ready(init);
     	function init() {
     		// Создание карты.
+    		let mapIndicator = document.getElementById('map');
     		var myMap = new ymaps.Map("map", {
     			// Координаты центра карты.
     			// Порядок по умолчанию: «широта, долгота».
@@ -1812,6 +1819,12 @@
     		});
     		myMap.behaviors.disable('scrollZoom');
     		myMap.controls.remove('zoomControl');
+    
+    		if (mapIndicator.classList.contains('dell-search')) {
+    			myMap.controls.remove('searchControl');
+    			myMap.controls.remove('geolocationControl');
+    		}
+    
     		myPlacemarkWithContent = new ymaps.Placemark([53.262191, 50.210021], {
     			hintContent: 'ТЦ «АМБАР»',
     			balloonContent: 'ТЦ «АМБАР»'
@@ -1832,18 +1845,29 @@
     
     		// добовление удаление маркеров
     		function addMark() {
-    			let mapsBtn = document.querySelectorAll('.maps-btn');
+    			let mapsBtn = document.querySelectorAll('.map-btn-switch');
     			let mapContainer = document.querySelectorAll('.map-container')
     
     			mapsBtn.forEach(item => {
     				item.addEventListener('click', () => {
     					let dataArr = item.getAttribute('data-map');
+    					let dataContact = item.getAttribute('data-contact');
     					let id = document.getElementById(dataArr);
     					mapsBtn.forEach(e => {
     						if (e.classList.contains('--active')) {
     							e.classList.remove('--active')
     						}
     					})
+    					// открытие закладки с контактами на страницы контактов
+    					if (dataContact) {
+    						const contactWrapp = document.querySelectorAll('.contact-wrapp');
+    						let idContact = document.getElementById(dataContact);
+    						contactWrapp.forEach(event => {
+    							event.classList.remove('--active')
+    						})
+    						idContact.classList.add('--active')
+    					}
+    					// отоброжение выброных контактов
     					mapContainer.forEach(event => {
     						event.classList.remove('--active')
     					})
