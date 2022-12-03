@@ -105,8 +105,22 @@ $(() => {
 				let text = this.innerText;
 				let select = this.closest('.select');
 				let currentText = select.querySelector(".select__current");
+				let selectBasket = document.querySelectorAll('.select__item-basket')
 				currentText.innerText = text;
 				select.classList.remove('is-active');
+				// отметка выброного обьема в карзине
+				if (selectBasket) {
+					selectBasket.forEach(e => {
+						e.addEventListener('click', () => {
+							let dataAtr = e.getAttribute('data-basket');
+							let classItemAll = document.querySelectorAll(`.${dataAtr}`);
+							classItemAll.forEach(event => {
+								event.classList.remove('--active')
+							})
+							e.classList.add('--active');
+						})
+					})
+				}
 			}
 			document.addEventListener('click', (event) => {
 				let selectList = document.querySelectorAll('.select');
@@ -654,4 +668,90 @@ $(() => {
 			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
 		}
 	});
+
+	// коризина колличество товара
+	function basketProduct() {
+		let btnPrev = document.querySelectorAll('.basket-coll-prev');
+		let btnNext = document.querySelectorAll('.basket-coll-next');
+		let basketNum = document.querySelectorAll('.basket-num');
+		if (btnPrev && btnNext && basketNum) {
+			btnPrev.forEach((item) => {
+				item.addEventListener('click', () => {
+					let tabId = item.getAttribute('data-basket');
+					let idInput = document.querySelector(tabId);
+					idInput.value -= 1;
+					if (idInput.value > 0) {
+						if (item.classList.contains('--disabled')) {
+							item.classList.remove('--disabled')
+						}
+					} else if (idInput.value <= 1) {
+						item.classList.add('--disabled')
+						idInput.value = 1;
+					}
+				})
+			})
+			btnNext.forEach((item) => {
+				item.addEventListener('click', () => {
+					let tabId = item.getAttribute('data-basket');
+					let idInput = document.querySelector(tabId);
+					let num = +idInput.value;
+
+					idInput.value = num + 1;
+					if (idInput.value > 1) {
+						btnPrev.forEach(item => {
+							if (item.getAttribute('data-basket') == tabId) {
+
+								if (item.classList.contains('--disabled')) {
+									item.classList.remove('--disabled')
+								}
+							}
+						})
+					}
+
+				})
+			})
+			basketNum.forEach((item) => {
+				item.addEventListener('keyup', () => {
+					console.log(item.value)
+					if (item.value < 0) {
+						item.value = 1;
+					}
+				})
+			})
+
+		}
+	}
+	basketProduct();
+
+	// удаление информации о скидке
+	function discoundDell() {
+		let btn = document.querySelectorAll('.basket-discount-btn');
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					item.parentElement.remove();
+				})
+			})
+		}
+
+	}
+	discoundDell()
+	// удаление заказа со страницы
+	function productDell() {
+		let btn = document.querySelectorAll('.basket-close-btn');
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					let dataAtr = item.getAttribute('data-dell');
+					let id = document.getElementById(dataAtr);
+					if (id) {
+						id.remove();
+					}
+
+				})
+			})
+		}
+
+	}
+	productDell()
 })
