@@ -817,4 +817,21 @@ $(() => {
 
 	}
 	productDell()
+
+	// alphabet раскрытие списка
+	function alphabetOpen() {
+		const btn = document.querySelectorAll('.alphabet-btn')
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				item.parentElement.classList.toggle('--active');
+				if (item.parentElement.classList.contains('--active')) {
+					item.innerHTML = 'Скрыть'
+				} else {
+					item.innerHTML = 'Показать все'
+				}
+
+			})
+		})
+	}
+	alphabetOpen();
 })
