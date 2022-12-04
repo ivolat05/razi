@@ -106,6 +106,7 @@ $(() => {
 				let select = this.closest('.select');
 				let currentText = select.querySelector(".select__current");
 				let selectBasket = document.querySelectorAll('.select__item-basket')
+				let dataTell = this.getAttribute('data-tel');
 				currentText.innerText = text;
 				select.classList.remove('is-active');
 				// отметка выброного обьема в карзине
@@ -120,6 +121,16 @@ $(() => {
 							e.classList.add('--active');
 						})
 					})
+				}
+				//встовляем номер телефона
+				if (dataTell) {
+					let dataTelInp = this.getAttribute('data-tel-inp');
+					let classTelInp = document.querySelectorAll(`.${dataTelInp}`);
+					classTelInp.forEach(e => {
+						e.innerHTML = dataTell;
+						e.href = `tel:${dataTell.replace(/[^0-9]/g, '')}`
+					})
+
 				}
 			}
 			document.addEventListener('click', (event) => {
