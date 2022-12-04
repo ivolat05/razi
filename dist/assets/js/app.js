@@ -551,7 +551,7 @@ $(() => {
 	}
 	openTab('.brend-btn', '.brend-container', 'data-brand');
 	openTab('.card-tab-btn', '.card-tab', 'data-card');
-
+	openTab('.company-tab-btn', '.company-tab', 'data-company');
 	// accardion
 	function accordion(btnAccordion) {
 		const btn = document.querySelectorAll(`${btnAccordion}`);
@@ -721,6 +721,28 @@ $(() => {
 	// galary
 
 	$('.gallery-open').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		mainClass: 'mfp-galary',
+		tLoading: 'Загрузка изоброжения',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		}
+	});
+	$('.gallery-open-1').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		mainClass: 'mfp-galary',
+		tLoading: 'Загрузка изоброжения',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		}
+	});
+	$('.gallery-open-2').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		mainClass: 'mfp-galary',
