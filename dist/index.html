@@ -31,13 +31,21 @@
     
     <div class="wrapper">
     	<header class="header header-padding">
-    		<div class="container">
+    		<div class="container header-container">
     			<div class="header-wrapp">
+    				<div class="header-wrapp-container">
+    					<button class="header-open">
+    						<span class="header-open-line"></span>
+    					</button>
+    					<button class="header-search-mob-btn">
+    						<img src="./assets/img/header/search.svg" alt="" class="header-img">
+    					</button>
+    				</div>
     				<a href="index.html" class="logo">
     					<img src="./assets/img/header/logo.svg" alt="" class="logo-img">
     				</a>
     				<div class="header-coll">
-    					<div class="header-row-head">
+    					<div class="header-row-head --mobil-hiden">
     						<div class="header-head-coll">
     							<a href="#" class="header-head-link">
     								Доставка и оплата
@@ -45,12 +53,19 @@
     							<a href="#" class="header-head-link">
     								О компании
     							</a>
-    							<a href="#" class="header-head-link">
-    								Блог
-    							</a>
-    							<a href="#" class="header-head-link">
-    								Контакты
-    							</a>
+    							<div class="header-row-menu">
+    								<button class="header-row-menu-btn">
+    									...
+    								</button>
+    								<div class="header-row-menu-container">
+    									<a href="#" class="header-head-link">
+    										Блог
+    									</a>
+    									<a href="#" class="header-head-link">
+    										Контакты
+    									</a>
+    								</div>
+    							</div>
     						</div>
     						<div class="header-head-mess">
     							<div class="header-select-box">
@@ -101,51 +116,156 @@
     						</div>
     					</div>
     					<div class="header-row-body">
-    						<nav class="header-nav">
+    						<button class="header-open --mobil-hiden ">
+    							<span class="header-open-line"></span>
+    						</button>
+    						<div class="header-nav">
+    							<div class="header-mob-head">
+    								<a href="#" class="header-head-link">
+    									Доставка и оплата
+    								</a>
+    								<a href="#" class="header-head-link">
+    									О компании
+    								</a>
+    								<a href="#" class="header-head-link">
+    									Блог
+    								</a>
+    								<a href="#" class="header-head-link">
+    									Контакты
+    								</a>
+    							</div>
     							<ul class="header-list">
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Мужская парфюмерия
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Женская парфюмерия
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Для детей
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Разлив духов
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Духи на заказ
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Бренды
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     							</ul>
-    						</nav>
+    							<div class="header-mob-body">
+    								<a href="#popup-1" class="open-modal header-btn btn ">
+    									Написать нам
+    								</a>
+    								<div class="header-select-box">
+    									город:
+    									<div class="select header-lang">
+    										<div class="select__header">
+    											<span class="select__current">
+    												Самара
+    											</span>
+    											<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    												xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    												viewBox="0 0 10 6">
+    												<image id="down" width="10" height="6"
+    													xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    											</svg>
+    	
+    										</div>
+    										<div class="select__body">
+    											<div class="select__item">
+    												Самара
+    											</div>
+    											<div class="select__item">
+    												Самара 2
+    											</div>
+    											<div class="select__item">
+    												Самара 3
+    											</div>
+    										</div>
+    									</div>
+    	
+    								</div>
+    								<div class="header-mob-row">
+    									<div class="header-tell-box">
+    										телефон:
+    										<a href="tel:79879593899" class="header-tell">7 987 959-38-99 </a>
+    									</div>
+    									<a href="#" class="header-mess bnt-hover">
+    										<img src="./assets/img/header/whatsapp.svg" alt=""
+    											class="header-mess-img img-deactive-hover">
+    										<img src="./assets/img/header/whatsapp-hover.svg" alt=""
+    											class="header-mess-img img-active-hover">
+    									</a>
+    									<a href="#" class="header-mess  bnt-hover">
+    										<img src="./assets/img/header/telegram.svg" alt=""
+    											class="header-mess-img img-deactive-hover">
+    										<img src="./assets/img/header/telegram-hover.svg" alt=""
+    											class="header-mess-img img-active-hover">
+    									</a>
+    								</div>
+    							</div>
+    						</div>
     						<div class="header-body-coll">
-    							<div class="header-search-box">
+    							<div class="header-search-box --mobil-hiden ">
     								<input type="text" class="header-search" placeholder="Поиск ...">
     								<button class="header-search-btn">
     									<img src="./assets/img/header/search.svg" alt="" class="header-img">
     								</button>
     							</div>
-    							<a href="#popup-1" class="open-modal header-btn btn ">
+    							<a href="#popup-1" class="open-modal header-btn btn --mobil-hiden">
     								Написать нам
     							</a>
-    							<a href="#" class="header-user  bnt-hover">
+    							<a href="#" class="header-user  bnt-hover --mobil-hiden">
     								<img src="./assets/img/header/user.svg" alt="" class="header-img img-deactive-hover">
     								<img src="./assets/img/header/user-hover.svg" alt="" class="header-img img-active-hover">
     							</a>
@@ -170,6 +290,7 @@
     		<div class="container">
     	
     			<div class="main-wrapp">
+    				<div class="main-scrollbar"></div>
     				<div class="main-paginations"></div>
     				<div class="swiper-wrapper">
     					<div class="swiper-slide">
@@ -256,159 +377,148 @@
     				</div>
     	
     			</div>
+    	
     		</div>
     	</main>
     	<section class="menu menu-padding">
     		<div class="container">
     			<div class="menu-wrapp">
-    				<div class="menu-wrapp-coll">
-    					<a href="#" class="menu-box" data-aos="fade-up">
-    						<div class="menu-box-coll">
-    							<h3 class="menu-title">
-    								Парфюмерия
-    							</h3>
-    							<p class="menu-box-text">
-    								Приятно, граждане, наблюдать, как активно развивающиеся страны третьего мира и по сей день
-    								остаются уделом либералов.
-    							</p>
     	
-    							<div class="menu-box-link bnt-hover">
-    								<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
-    								<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
-    							</div>
+    				<a href="#" class="menu-box --one" data-aos="fade-up">
+    					<div class="menu-box-coll">
+    						<h3 class="menu-title">
+    							Парфюмерия
+    						</h3>
+    						<p class="menu-box-text">
+    							Приятно, граждане, наблюдать, как активно развивающиеся страны третьего мира и по сей день
+    							остаются уделом либералов.
+    						</p>
+    	
+    						<div class="menu-box-link bnt-hover">
+    							<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
+    							<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
     						</div>
-    						<div class="menu-box-img">
-    							<img src="./assets/img/menu/menu-1.png" alt="" class="menu-img">
+    					</div>
+    					<div class="menu-box-img">
+    						<img src="./assets/img/menu/menu-1.png" alt="" class="menu-img">
+    					</div>
+    				</a>
+    				<a href="#" class="menu-box --two" data-aos="fade-up">
+    					<div class="menu-box-coll">
+    						<h3 class="menu-title">
+    							Для него
+    						</h3>
+    						<p class="menu-box-text">
+    							Банальные, но неопровержимые выводы, а также.
+    						</p>
+    	
+    						<div class="menu-box-link bnt-hover">
+    							<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
+    							<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
     						</div>
-    					</a>
-    	
-    					<a href="#" class="menu-box --two" data-aos="fade-up">
-    						<div class="menu-box-coll">
-    							<h3 class="menu-title">
-    								Для него
-    							</h3>
-    							<p class="menu-box-text">
-    								Банальные, но неопровержимые выводы, а также.
-    							</p>
-    	
-    							<div class="menu-box-link bnt-hover">
-    								<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
-    								<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
-    							</div>
-    						</div>
-    						<div class="menu-box-img">
-    							<img src="./assets/img/menu/menu-3.png" alt="" class="menu-img">
-    						</div>
-    					</a>
-    	
-    				</div>
-    	
-    				<div class="menu-wrapp-coll">
-    					<a href="" class="menu-box --three" data-aos="fade-up">
-    						<div class="menu-box-coll">
-    							<h3 class="menu-title">
-    								Отливанты
-    							</h3>
-    							<ul class="menu-list">
-    								<li class="menu-list-inner">
-    									<div class="menu-list-link">
-    										2 мл
-    										<img src="./assets/img/menu/arrow.svg" alt="" class="menu-list-img">
-    									</div>
-    	
-    								</li>
-    								<li class="menu-list-inner">
-    									<div class="menu-list-link">
-    										4 мл
-    										<img src="./assets/img/menu/arrow.svg" alt="" class="menu-list-img">
-    									</div>
-    	
-    								</li>
-    								<li class="menu-list-inner">
-    									<div class="menu-list-link">
-    										6 мл
-    										<img src="./assets/img/menu/arrow.svg" alt="" class="menu-list-img">
-    									</div>
-    	
-    								</li>
-    							</ul>
-    							<div class="menu-row">
-    								<div class="menu-box-link bnt-hover">
-    									<img src="./assets/img/main/down-hover.svg" alt=""
-    										class="menu-btn-img img-deactive-hover">
-    									<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
+    					</div>
+    					<div class="menu-box-img">
+    						<img src="./assets/img/menu/menu-3.png" alt="" class="menu-img">
+    					</div>
+    				</a>
+    				<a href="" class="menu-box --three" data-aos="fade-up">
+    					<div class="menu-box-coll">
+    						<h3 class="menu-title">
+    							Отливанты
+    						</h3>
+    						<ul class="menu-list">
+    							<li class="menu-list-inner">
+    								<div class="menu-list-link">
+    									2 мл
+    									<img src="./assets/img/menu/arrow.svg" alt="" class="menu-list-img">
     								</div>
-    								<div class="menu-row-link">
-    									Смотреть все
+    	
+    							</li>
+    							<li class="menu-list-inner">
+    								<div class="menu-list-link">
+    									4 мл
+    									<img src="./assets/img/menu/arrow.svg" alt="" class="menu-list-img">
     								</div>
-    							</div>
     	
-    						</div>
-    						<div class="menu-box-img">
-    							<img src="./assets/img/menu/menu-2.png" alt="" class="menu-img">
-    						</div>
-    					</a>
+    							</li>
+    							<li class="menu-list-inner">
+    								<div class="menu-list-link">
+    									6 мл
+    									<img src="./assets/img/menu/arrow.svg" alt="" class="menu-list-img">
+    								</div>
     	
-    					<a href="#" class="menu-box --four" data-aos="fade-up">
-    						<div class="menu-box-coll">
-    							<h3 class="menu-title">
-    								Для нее
-    							</h3>
-    							<p class="menu-box-text">
-    								Являясь всего лишь частью общей картины, многие известные личности, вне зависимости от их
-    								уровня, должны быть подвергнуты целой серии.
-    							</p>
-    						</div>
-    						<div class="menu-box-row">
+    							</li>
+    						</ul>
+    						<div class="menu-row">
     							<div class="menu-box-link bnt-hover">
     								<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
     								<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
     							</div>
-    							<div class="menu-box-img">
-    								<img src="./assets/img/menu/menu-4.png" alt="" class="menu-img">
+    							<div class="menu-row-link">
+    								Смотреть все
     							</div>
     						</div>
-    					</a>
     	
-    				</div>
-    	
-    	
-    				<div class="menu-wrapp-coll">
-    					<a href="#popup-1" class="open-modal menu-box --five" data-aos="fade-up">
-    						<div class="menu-box-coll">
-    							<h3 class="menu-title">
-    								Мы не покупаем готовое, мы создаем
-    							</h3>
-    							<p class="menu-box-text">
-    								Мы можем создать аромат, который будет отличать тебя от других. Меня зовут Рази, и я могу
-    								подобрать аромат лично для тебя. А также мы бесплатно упакуем ваш парфюм.
-    							</p>
-    	
-    							<div class="menu-box-btn btn">
-    								Написать нам
-    							</div>
-    						</div>
-    					</a>
-    	
-    					<a href="#" class="menu-box --six" data-aos="fade-up">
-    						<div class="menu-box-coll">
-    							<h3 class="menu-title">
-    								Новинки
-    							</h3>
-    							<p class="menu-box-text">
-    								Являясь всего лишь частью общей картины, многие известные личности, вне.
-    							</p>
-    	
-    							<div class="menu-box-link bnt-hover">
-    								<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
-    								<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
-    							</div>
+    					</div>
+    					<div class="menu-box-img">
+    						<img src="./assets/img/menu/menu-2.png" alt="" class="menu-img">
+    					</div>
+    				</a>
+    				<a href="#" class="menu-box --four" data-aos="fade-up">
+    					<div class="menu-box-coll">
+    						<h3 class="menu-title">
+    							Для нее
+    						</h3>
+    						<p class="menu-box-text">
+    							Являясь всего лишь частью общей картины, многие известные личности, вне зависимости от их
+    							уровня, должны быть подвергнуты целой серии.
+    						</p>
+    					</div>
+    					<div class="menu-box-row">
+    						<div class="menu-box-link bnt-hover">
+    							<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
+    							<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
     						</div>
     						<div class="menu-box-img">
-    							<img src="./assets/img/menu/menu-5.png" alt="" class="menu-img">
+    							<img src="./assets/img/menu/menu-4.png" alt="" class="menu-img">
     						</div>
-    					</a>
-    				</div>
+    					</div>
+    				</a>
+    				<a href="#popup-1" class="open-modal menu-box --five" data-aos="fade-up">
+    					<div class="menu-box-coll">
+    						<h3 class="menu-title">
+    							Мы не покупаем готовое, мы создаем
+    						</h3>
+    						<p class="menu-box-text">
+    							Мы можем создать аромат, который будет отличать тебя от других. Меня зовут Рази, и я могу
+    							подобрать аромат лично для тебя. А также мы бесплатно упакуем ваш парфюм.
+    						</p>
+    	
+    						<div class="menu-box-btn btn">
+    							Написать нам
+    						</div>
+    					</div>
+    				</a>
+    	
+    	
+    				<a href="#" class="menu-box --six" data-aos="fade-up">
+    					<div class="menu-box-coll">
+    						<h3 class="menu-title">
+    							Новинки
+    						</h3>
+    						<p class="menu-box-text">
+    							Являясь всего лишь частью общей картины, многие известные личности, вне.
+    						</p>
+    	
+    						<div class="menu-box-link bnt-hover">
+    							<img src="./assets/img/main/down-hover.svg" alt="" class="menu-btn-img img-deactive-hover">
+    							<img src="./assets/img/main/down.svg" alt="" class="img-active-hover menu-btn-img">
+    						</div>
+    					</div>
+    					<div class="menu-box-img">
+    						<img src="./assets/img/menu/menu-5.png" alt="" class="menu-img">
+    					</div>
+    				</a>
     	
     			</div>
     		</div>
@@ -436,41 +546,70 @@
     	<section class="catalog catalog-padding">
     		<div class="container">
     			<div class="catalog-row-header">
-    				<div class="catalog-row-coll">
-    					<h3 class="catalog-title">
-    						Каталог
-    					</h3>
-    					<div class="catalog-row-btn">
-    						<button class="catalog-btn --active" data-catalog="base">
-    							BASE
-    						</button>
-    						<button class="catalog-btn" data-catalog="premium">
-    							PREMIUM
-    						</button>
-    						<button class="catalog-btn" data-catalog="lux">
-    							LUX
-    						</button>
-    						<button class="catalog-btn" data-catalog="sale">
-    							РАСПРОДАЖА
-    						</button>
-    					</div>
+    				<h3 class="catalog-title">
+    					Каталог
+    				</h3>
+    				<div class="catalog-row-btn">
+    					<button class="catalog-btn --active" data-catalog="base">
+    						BASE
+    					</button>
+    					<button class="catalog-btn" data-catalog="premium">
+    						PREMIUM
+    					</button>
+    					<button class="catalog-btn" data-catalog="lux">
+    						LUX
+    					</button>
+    					<button class="catalog-btn" data-catalog="sale">
+    						РАСПРОДАЖА
+    					</button>
     				</div>
-    				<div class="catalog-box-btn">
-    					<button class="slaid-btn bnt-hover catalog-button-prev">
+    	
+    				<div id="id-base" class="catalog-box-btn --active">
+    					<button class="slaid-btn bnt-hover catalog-button-prev catalog-button-prev-1">
     						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img img-deactive-hover">
     						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
     					</button>
-    					<button class="slaid-btn slaid-button-next  bnt-hover catalog-button-next">
+    					<button class="slaid-btn slaid-button-next  bnt-hover catalog-button-next catalog-button-next-1">
+    						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img  img-deactive-hover">
+    						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    					</button>
+    				</div>
+    				<div id="id-premium" class="catalog-box-btn">
+    					<button class="slaid-btn bnt-hover catalog-button-prev catalog-button-prev-2">
+    						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img img-deactive-hover">
+    						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    					</button>
+    					<button class="slaid-btn slaid-button-next  bnt-hover catalog-button-next catalog-button-next-2">
+    						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img  img-deactive-hover">
+    						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    					</button>
+    				</div>
+    				<div id="id-lux" class="catalog-box-btn">
+    					<button class="slaid-btn bnt-hover catalog-button-prev catalog-button-prev-3">
+    						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img img-deactive-hover">
+    						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    					</button>
+    					<button class="slaid-btn slaid-button-next  bnt-hover catalog-button-next catalog-button-next-3">
+    						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img  img-deactive-hover">
+    						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    					</button>
+    				</div>
+    				<div id="id-sale" class="catalog-box-btn">
+    					<button class="slaid-btn bnt-hover catalog-button-prev catalog-button-prev-4">
+    						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img img-deactive-hover">
+    						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
+    					</button>
+    					<button class="slaid-btn slaid-button-next  bnt-hover catalog-button-next catalog-button-next-4">
     						<img src="./assets/img/catalog/arrow.svg" alt="" class="slaid-btn-img  img-deactive-hover">
     						<img src="./assets/img/catalog/arrow-hover.svg" alt="" class="slaid-btn-img img-active-hover">
     					</button>
     				</div>
     			</div>
-    			<div class="catalog-wrapp catalog-swiper">
+    			<div id="base" class="catalog-wrapp catalog-swiper catalog-box-container base --active">
     				<div class="swiper-wrapper">
-    					<div class="swiper-slide catalog-box-container  base --active">
+    					<div class="swiper-slide   ">
     	
-    						<a href="#" class="catalog-box">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -529,7 +668,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -544,8 +683,8 @@
     						</a>
     	
     					</div>
-    					<div class="swiper-slide catalog-box-container base --active">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-2.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -618,8 +757,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container base --active">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -678,7 +817,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -693,8 +832,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container base --active">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-4.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -763,8 +902,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container base --active">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -823,7 +962,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -839,8 +978,8 @@
     						</a>
     					</div>
     	
-    					<div class="swiper-slide catalog-box-container lux">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -899,7 +1038,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -914,8 +1053,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container base --active">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-4.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -986,8 +1125,8 @@
     					</div>
     	
     	
-    					<div class="swiper-slide catalog-box-container lux">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide   ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-2.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1060,8 +1199,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container sale">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1120,7 +1259,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -1135,8 +1274,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container  lux">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-4.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1205,8 +1344,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container  premium">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1265,7 +1404,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -1280,8 +1419,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container premium">
-    						<a href="#" class="catalog-box ">
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1340,7 +1479,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -1355,8 +1494,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container base --active">
-    						<a href="#" class="catalog-box ">
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-2.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1429,7 +1568,7 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container sale">
+    					<div class="swiper-slide base">
     						<a href="#" class="catalog-box ">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
@@ -1489,7 +1628,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -1504,8 +1643,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container  base --active">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide   ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-4.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1574,8 +1713,8 @@
     	
     						</a>
     					</div>
-    					<div class="swiper-slide catalog-box-container  premium">
-    						<a href="#" class="catalog-box">
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box base">
     							<div class="catalog-box-head">
     								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
     								<span class="catalog-discount">
@@ -1634,7 +1773,7 @@
     								<li class="catalog-list-inner">
     									70 мл
     								</li>
-    								<li class="catalog-list-inner">
+    								<li class="catalog-list-inner catalog--btn --active">
     									100 мл
     								</li>
     							</ul>
@@ -1650,6 +1789,695 @@
     						</a>
     					</div>
     	
+    				</div>
+    			</div>
+    	
+    			<div id="premium" class="catalog-wrapp catalog-box-container   ">
+    				<div class="swiper-wrapper">
+    					<div class="swiper-slide   ">
+    	
+    						<a href="#" class="catalog-box premium">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Марк Антуан <br>Барруа B683 Унисекс
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner catalog--btn --active">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									3 950 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									5 800 ₽
+    								</div>
+    							</div>
+    						</a>
+    	
+    					</div>
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box premium">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-2.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-30%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Antonio Banderas Queen
+    								of Seduction
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Name
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									74
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    	
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									12 580 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									15 960 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    					</div>
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box premium">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Mancera Cedrat Boise
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Название серии
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									5
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner catalog--btn --active">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									1 800 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									2 400 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    					</div>
+    					<div class="swiper-slide  ">
+    						<a href="#" class="catalog-box premium">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-4.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-40%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Antonio Banderas Blue Seduction for WomenAntonio
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									80 мл
+    								</li>
+    	
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									5 400 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									8 200 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    					</div>
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box premium">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Марк Антуан <br>Барруа B683 Унисекс
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner catalog--btn --active">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									3 950 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									5 800 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    					</div>
+    	
+    	
+    				</div>
+    			</div>
+    	
+    			<div id="lux" class="catalog-wrapp   catalog-box-container  ">
+    				<div class="swiper-wrapper">
+    					<div class="swiper-slide   ">
+    	
+    						<a href="#" class="catalog-box lux">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Марк Антуан <br>Барруа B683 Унисекс
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner catalog--btn --active">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									3 950 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									5 800 ₽
+    								</div>
+    							</div>
+    						</a>
+    	
+    					</div>
+    	
+    				</div>
+    			</div>
+    	
+    			<div id="sale" class="catalog-wrapp catalog-box-container   sale">
+    				<div class="swiper-wrapper">
+    					<div class="swiper-slide  ">
+    	
+    						<a href="#" class="catalog-box sale">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-1.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Марк Антуан <br>Барруа B683 Унисекс
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								L’lmperatrice Limited Edition
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									286
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner catalog--btn --active">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									3 950 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									5 800 ₽
+    								</div>
+    							</div>
+    						</a>
+    	
+    					</div>
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box sale">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-2.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-30%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Antonio Banderas Queen
+    								of Seduction
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Name
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									74
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									100 мл
+    								</li>
+    	
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									12 580 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									15 960 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    					</div>
+    					<div class="swiper-slide ">
+    						<a href="#" class="catalog-box sale">
+    							<div class="catalog-box-head">
+    								<img src="./assets/img/catalog/catalog-3.png" alt="" class="catalog-box-img">
+    								<span class="catalog-discount">
+    									-25%
+    								</span>
+    							</div>
+    	
+    							<h4 class="catalog-box-title">
+    								Mancera Cedrat Boise
+    							</h4>
+    							<h5 class="catalog-box-subtitle">
+    								Название серии
+    							</h5>
+    							<div class="catalog-row">
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<svg class="catalog-star" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 53.867 53.867"
+    									style="enable-background:new 0 0 53.867 53.867;" xml:space="preserve">
+    									<polygon style="fill:#edac6c;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798
+    		10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " />
+    								</svg>
+    								<span class="catalog-star-span">
+    									5
+    								</span>
+    							</div>
+    							<ul class="catalog-list">
+    								<li class="catalog-list-inner">
+    									30 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									50 мл
+    								</li>
+    								<li class="catalog-list-inner">
+    									70 мл
+    								</li>
+    								<li class="catalog-list-inner catalog--btn --active">
+    									100 мл
+    								</li>
+    							</ul>
+    							<div class="catalog-price">
+    								<div class="catalog-price-new">
+    									1 800 ₽
+    								</div>
+    								<div class="catalog-price-old">
+    									2 400 ₽
+    								</div>
+    							</div>
+    	
+    						</a>
+    					</div>
     				</div>
     			</div>
     		</div>
@@ -1663,111 +2491,20 @@
     					</h3>
     				</div>
     				<div class="brend-head-coll">
-    					<button class="brend-btn --active" data-brand="base">
+    					<button class="brend-btn --active" data-brand="brend-base">
     						BASE
     					</button>
-    					<button class="brend-btn" data-brand="premium">
+    					<button class="brend-btn" data-brand="brend-premium">
     						PREMIUM
     					</button>
-    					<button class="brend-btn" data-brand="lux">
+    					<button class="brend-btn" data-brand="brend-lux">
     						LUX
     					</button>
     				</div>
     			</div>
     	
     		</div>
-    		<div id="base" class="brend-container --active">
-    			<div class="brend-row">
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
-    				</a>
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-2.png" alt="" class="brend-row-img">
-    				</a>
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-3.png" alt="" class="brend-row-img">
-    				</a>
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-4.png" alt="" class="brend-row-img">
-    				</a>
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-5.png" alt="" class="brend-row-img">
-    				</a>
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-6.png" alt="" class="brend-row-img">
-    				</a>
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-7.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    	
-    			</div>
-    	
-    	
-    			<div class="brend-row-2">
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-8.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-9.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-10.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-11.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-12.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-13.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-14.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    			</div>
-    	
-    	
-    			<div class="brend-row">
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-15.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-16.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-17.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-18.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-19.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    				<a href="#" class="brend-row-box">
-    					<img src="./assets/img/brend/brend-2.png" alt="" class="brend-row-img">
-    				</a>
-    	
-    			</div>
-    		</div>
-    		<div id="premium" class="brend-container">
+    		<div id="brend-base" class="brend-container --active">
     			<div class="brend-row">
     				<a href="#" class="brend-row-box">
     					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
@@ -1858,8 +2595,70 @@
     	
     			</div>
     	
+    			<div class="brend-row-2  --mob-hide">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-8.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-9.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-10.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-11.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-12.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-13.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-14.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
+    	
+    	
+    			<div class="brend-row --mob-hide">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-15.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-16.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-17.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-18.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-19.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-2.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
     		</div>
-    		<div id="lux" class="brend-container">
+    		<div id="brend-premium" class="brend-container">
     			<div class="brend-row">
     				<a href="#" class="brend-row-box">
     					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
@@ -1920,6 +2719,227 @@
     	
     	
     			<div class="brend-row">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-15.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-16.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-17.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-18.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-19.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-2.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
+    	
+    			<div class="brend-row-2  --mob-hide">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-8.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-9.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-10.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-11.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-12.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-13.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-14.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
+    	
+    	
+    			<div class="brend-row --mob-hide">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-15.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-16.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-17.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-18.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-19.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-2.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
+    		</div>
+    		<div id="brend-lux" class="brend-container">
+    			<div class="brend-row">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
+    				</a>
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-2.png" alt="" class="brend-row-img">
+    				</a>
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-3.png" alt="" class="brend-row-img">
+    				</a>
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-4.png" alt="" class="brend-row-img">
+    				</a>
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-5.png" alt="" class="brend-row-img">
+    				</a>
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-6.png" alt="" class="brend-row-img">
+    				</a>
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-7.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    	
+    			</div>
+    	
+    	
+    			<div class="brend-row-2">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-8.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-9.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-10.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-11.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-12.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-13.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-14.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
+    	
+    	
+    			<div class="brend-row">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-15.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-16.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-17.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-18.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-19.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-1.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-2.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
+    	
+    	
+    	
+    	
+    	
+    			<div class="brend-row-2  --mob-hide">
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-8.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-9.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-10.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-11.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-12.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-13.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    				<a href="#" class="brend-row-box">
+    					<img src="./assets/img/brend/brend-14.png" alt="" class="brend-row-img">
+    				</a>
+    	
+    			</div>
+    	
+    	
+    			<div class="brend-row --mob-hide">
     				<a href="#" class="brend-row-box">
     					<img src="./assets/img/brend/brend-15.png" alt="" class="brend-row-img">
     				</a>
@@ -1987,7 +3007,7 @@
     								<img src="./assets/img/blog/blog-2.jpg" alt="" class="blog-img">
     							</div>
     							<div class="blog-text">
-    								Не следует, однако, забывать, что <br> постоянное информационно
+    								Не следует, однако, забывать, что постоянное информационно
     							</div>
     						</a>
     					</div>
@@ -1997,7 +3017,7 @@
     								<img src="./assets/img/blog/blog-3.jpg" alt="" class="blog-img">
     							</div>
     							<div class="blog-text">
-    								Приятно, граждане, наблюдать, как <br> акционеры крупнейших компаний
+    								Приятно, граждане, наблюдать, как акционеры крупнейших компаний
     							</div>
     						</a>
     					</div>
@@ -2062,7 +3082,7 @@
     		<div class="container">
     			<div class="score-wrapp">
     				<div class="score-box-img">
-    					<img src="./assets/img/score/score.svg" alt="" class="score-img">
+    	
     				</div>
     				<div class="score-coll">
     					<div class="score-coll-box">
@@ -2583,6 +3603,10 @@
     	}
     
     </script>
+    
+    <div class="fon">
+    
+    </div>
     
     <script src="assets/js/app.min.js"></script>
 </body>

@@ -172,6 +172,9 @@ $(() => {
 				pagination: {
 					el: '.main-paginations'
 				},
+				scrollbar: {
+					el: ".main-scrollbar",
+				},
 				speed: 800,
 				effect: "creative",
 				creativeEffect: {
@@ -285,49 +288,208 @@ $(() => {
 	mainSwaiper()
 	// catalog swiper
 	function catalogSwiper() {
-		const swiperBox = document.querySelector('.catalog-swiper');
+		const swiperBox = document.querySelectorAll('.catalog-swiper');
 		if (swiperBox) {
 			const swiper = new Swiper('.catalog-swiper', {
-
-				slidesPerView: 4,
-				slidesPerColumn: 1,
-				spaceBetween: 20,
-				navigation: {
-					nextEl: '.catalog-button-next',
-					prevEl: '.catalog-button-prev',
+				grid: {
+					rows: 2,
+					fill: "row"
 				},
 
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.catalog-button-next-1',
+					prevEl: '.catalog-button-prev-1',
+				},
+				breakpoints: {
+					320: {
+						grid: {
+							rows: 2,
+							fill: "row"
+						},
+						slidesPerView: 2,
+						slidesPerColumn: 2,
+						spaceBetween: 10,
+					},
+					992: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1500: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 4,
+						spaceBetween: 20,
+					}
+
+
+				}
+
 			});
+			const swiperPremium = new Swiper('#premium', {
+				grid: {
+					rows: 2,
+					fill: "row"
+				},
+
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.catalog-button-next-2',
+					prevEl: '.catalog-button-prev-2',
+				},
+				breakpoints: {
+					320: {
+						grid: {
+							rows: 2,
+							fill: "row"
+						},
+						slidesPerView: 2,
+						slidesPerColumn: 2,
+						spaceBetween: 10,
+					},
+					992: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1500: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 4,
+						spaceBetween: 20,
+					}
+
+
+				}
+			});
+			const swiperLux = new Swiper('#lux', {
+				grid: {
+					rows: 2,
+					fill: "row"
+				},
+
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.catalog-button-next-3',
+					prevEl: '.catalog-button-prev-3',
+				},
+				breakpoints: {
+					320: {
+						grid: {
+							rows: 2,
+							fill: "row"
+						},
+						slidesPerView: 2,
+						slidesPerColumn: 2,
+						spaceBetween: 10,
+					},
+					992: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1500: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 4,
+						spaceBetween: 20,
+					}
+
+
+				}
+			});
+			const swiperSale = new Swiper('#sale', {
+				grid: {
+					rows: 2,
+					fill: "row"
+				},
+
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.catalog-button-next-4',
+					prevEl: '.catalog-button-prev-4',
+				},
+				breakpoints: {
+					320: {
+						grid: {
+							rows: 2,
+							fill: "row"
+						},
+						slidesPerView: 2,
+						slidesPerColumn: 2,
+						spaceBetween: 10,
+					},
+					992: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1500: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 4,
+						spaceBetween: 20,
+					}
+
+
+				}
+			});
+
 			const btn = document.querySelectorAll('.catalog-btn');
 			const catalogBox = document.querySelectorAll('.catalog-box-container');
+
 			if (btn && catalogBox) {
 				btn.forEach(item => {
-					if (item.classList.contains('--active')) {
-						let dataArr = item.getAttribute('data-catalog');
-						catalogBox.forEach(e => {
-							if (e.classList.contains(dataArr)) {
-								e.classList.add('--active')
-							} else {
-								e.classList.remove('--active')
-							}
-						})
-						swiper.updateSlides()
-					}
 
 					item.addEventListener('click', () => {
 						let dataArr = item.getAttribute('data-catalog');
+						let id = document.getElementById(dataArr);
+						let boxBtn = document.querySelectorAll('.catalog-box-btn')
+						let idBtn = document.getElementById(`id-${dataArr}`);
+
 						btn.forEach(i => {
 							i.classList.remove('--active')
 						})
-						item.classList.add('--active')
-						catalogBox.forEach(e => {
-							if (e.classList.contains(dataArr)) {
-								e.classList.add('--active')
-							} else {
-								e.classList.remove('--active')
-							}
+						boxBtn.forEach(i => {
+							i.classList.remove('--active')
 						})
-						swiper.updateSlides()
+
+						catalogBox.forEach(e => {
+							e.classList.remove('--active')
+						})
+						item.classList.add('--active')
+						id.classList.add('--active')
+						idBtn.classList.add('--active')
+
 					})
 				})
 			}
@@ -340,14 +502,48 @@ $(() => {
 		const blogBox = document.querySelector('.blog-swiper');
 		if (blogBox) {
 			const swiper = new Swiper(blogBox, {
-				loop: true,
-				slidesPerView: 4,
-				slidesPerColumn: 1,
-				spaceBetween: 20,
+
+				grid: {
+					rows: 2,
+					fill: "row"
+				},
+
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 10,
 				navigation: {
 					nextEl: '.blog-button-next',
 					prevEl: '.blog-button-prev',
 				},
+				breakpoints: {
+					320: {
+						grid: {
+							rows: 2,
+							fill: "row"
+						},
+						slidesPerView: 2,
+						slidesPerColumn: 2,
+						spaceBetween: 10,
+					},
+					992: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1500: {
+						grid: {
+							rows: 1,
+							fill: "row"
+						},
+						slidesPerView: 4,
+						spaceBetween: 20,
+					}
+
+
+				}
 
 			});
 		}
@@ -504,30 +700,39 @@ $(() => {
 					} else {
 						blockAnim.style.transform = `translateX(${t * (-1)}px)`
 					}
-
+					// определяем продолжительность цикла
+					if (window.innerWidth <= 570) {
+						whileClose = start.offsetHeight + window.screen.availHeight * 4;
+					} else {
+						whileClose = lengthBox;
+					}
 					blockRow.forEach(item => {
 
 
-						if (lengthBox > item.innerHTML.length) {
+						if (whileClose > item.innerHTML.length) {
 							let num = item.innerHTML.length;
-							while (lengthBox > num) {
+							while (whileClose > num) {
 								let box = item.cloneNode(true);
 								item.appendChild(box)
 								num = item.innerHTML.length
 							}
+
 						}
 
 						item.style.transform = `translateX(${t}px)`
 					})
 					blockRowTwo.forEach(item => {
-						if (lengthBox > item.innerHTML.length) {
+
+						if (whileClose > item.innerHTML.length) {
 							let num = item.innerHTML.length;
-							while (lengthBox > num) {
+							while (whileClose > num) {
 								let box = item.cloneNode(true);
 								item.appendChild(box)
 								num = item.innerHTML.length
 							}
+
 						}
+
 						item.style.transform = `translateX(${t * (-1)}px)`
 
 					})
@@ -867,4 +1072,70 @@ $(() => {
 		})
 	}
 	alphabetOpen();
+
+	//menu open
+	function menuOpen() {
+		const btn = document.querySelectorAll('.header-open');
+		const fon = document.querySelector('.fon');
+		const body = document.querySelector('body');
+		const headerNav = document.querySelector('.header-nav');
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', (e) => {
+					btn.forEach(ev => {
+						ev.classList.toggle('--active');
+					})
+					fon.classList.toggle('--active');
+					body.classList.toggle('--stop');
+					headerNav.classList.toggle('--active');
+					e.stopPropagation();
+
+				})
+			})
+
+			fon.addEventListener('click', function (e) {
+				btn.forEach(item => {
+					item.classList.remove('--active')
+				})
+				fon.classList.remove('--active');
+				body.classList.remove('--stop');
+				headerNav.classList.remove('--active');
+			})
+
+		}
+	}
+	menuOpen()
+
+	function headerRowMenu() {
+		const btn = document.querySelector('.header-row-menu-btn');
+
+		if (btn) {
+
+
+			btn.addEventListener('click', (e) => {
+
+				btn.classList.toggle('--active');
+				e.stopPropagation();
+			})
+			document.addEventListener('click', function (e) {
+				btn.classList.remove('--active')
+			})
+
+		}
+	}
+	headerRowMenu()
+	// catalog раскрытие пробирок
+	function calalogVisible() {
+		const btn = document.querySelectorAll('.catalog--btn');
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					item.classList.remove('--active');
+				})
+			})
+
+
+		}
+	}
+	calalogVisible()
 })

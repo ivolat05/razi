@@ -31,13 +31,21 @@
     
     <div class="wrapper">
     	<header class="header header-padding">
-    		<div class="container">
+    		<div class="container header-container">
     			<div class="header-wrapp">
+    				<div class="header-wrapp-container">
+    					<button class="header-open">
+    						<span class="header-open-line"></span>
+    					</button>
+    					<button class="header-search-mob-btn">
+    						<img src="./assets/img/header/search.svg" alt="" class="header-img">
+    					</button>
+    				</div>
     				<a href="index.html" class="logo">
     					<img src="./assets/img/header/logo.svg" alt="" class="logo-img">
     				</a>
     				<div class="header-coll">
-    					<div class="header-row-head">
+    					<div class="header-row-head --mobil-hiden">
     						<div class="header-head-coll">
     							<a href="#" class="header-head-link">
     								Доставка и оплата
@@ -45,12 +53,19 @@
     							<a href="#" class="header-head-link">
     								О компании
     							</a>
-    							<a href="#" class="header-head-link">
-    								Блог
-    							</a>
-    							<a href="#" class="header-head-link">
-    								Контакты
-    							</a>
+    							<div class="header-row-menu">
+    								<button class="header-row-menu-btn">
+    									...
+    								</button>
+    								<div class="header-row-menu-container">
+    									<a href="#" class="header-head-link">
+    										Блог
+    									</a>
+    									<a href="#" class="header-head-link">
+    										Контакты
+    									</a>
+    								</div>
+    							</div>
     						</div>
     						<div class="header-head-mess">
     							<div class="header-select-box">
@@ -101,51 +116,156 @@
     						</div>
     					</div>
     					<div class="header-row-body">
-    						<nav class="header-nav">
+    						<button class="header-open --mobil-hiden ">
+    							<span class="header-open-line"></span>
+    						</button>
+    						<div class="header-nav">
+    							<div class="header-mob-head">
+    								<a href="#" class="header-head-link">
+    									Доставка и оплата
+    								</a>
+    								<a href="#" class="header-head-link">
+    									О компании
+    								</a>
+    								<a href="#" class="header-head-link">
+    									Блог
+    								</a>
+    								<a href="#" class="header-head-link">
+    									Контакты
+    								</a>
+    							</div>
     							<ul class="header-list">
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Мужская парфюмерия
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Женская парфюмерия
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Для детей
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Разлив духов
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Духи на заказ
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     								<li class="header-list-inner">
     									<a href="#" class="header-list-link">
     										Бренды
+    										<svg class="header-list-mob-arrow" xmlns="http://www.w3.org/2000/svg"
+    											xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    											viewBox="0 0 10 6">
+    											<image id="down" width="10" height="6"
+    												xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    										</svg>
     									</a>
     								</li>
     							</ul>
-    						</nav>
+    							<div class="header-mob-body">
+    								<a href="#popup-1" class="open-modal header-btn btn ">
+    									Написать нам
+    								</a>
+    								<div class="header-select-box">
+    									город:
+    									<div class="select header-lang">
+    										<div class="select__header">
+    											<span class="select__current">
+    												Самара
+    											</span>
+    											<svg class="select-arrow" xmlns="http://www.w3.org/2000/svg"
+    												xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+    												viewBox="0 0 10 6">
+    												<image id="down" width="10" height="6"
+    													xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABHNCSVQICAgIfAhkiAAAAGxJREFUCFtjfLsmh4mBgcEHiLcC8V8gRgbMQI4dEO9nBCrkBzJuAPF2IE5FUswGZM8EYncglgcpBJlgCsSbkBSDTFoCxLZA7AfEp2EK0RXzICsCSSIrRFYMYoNNgjkYXSFIXBWI/wPxHWRfAQAsIx4qkd5YrAAAAABJRU5ErkJggg==" />
+    											</svg>
+    	
+    										</div>
+    										<div class="select__body">
+    											<div class="select__item">
+    												Самара
+    											</div>
+    											<div class="select__item">
+    												Самара 2
+    											</div>
+    											<div class="select__item">
+    												Самара 3
+    											</div>
+    										</div>
+    									</div>
+    	
+    								</div>
+    								<div class="header-mob-row">
+    									<div class="header-tell-box">
+    										телефон:
+    										<a href="tel:79879593899" class="header-tell">7 987 959-38-99 </a>
+    									</div>
+    									<a href="#" class="header-mess bnt-hover">
+    										<img src="./assets/img/header/whatsapp.svg" alt=""
+    											class="header-mess-img img-deactive-hover">
+    										<img src="./assets/img/header/whatsapp-hover.svg" alt=""
+    											class="header-mess-img img-active-hover">
+    									</a>
+    									<a href="#" class="header-mess  bnt-hover">
+    										<img src="./assets/img/header/telegram.svg" alt=""
+    											class="header-mess-img img-deactive-hover">
+    										<img src="./assets/img/header/telegram-hover.svg" alt=""
+    											class="header-mess-img img-active-hover">
+    									</a>
+    								</div>
+    							</div>
+    						</div>
     						<div class="header-body-coll">
-    							<div class="header-search-box">
+    							<div class="header-search-box --mobil-hiden ">
     								<input type="text" class="header-search" placeholder="Поиск ...">
     								<button class="header-search-btn">
     									<img src="./assets/img/header/search.svg" alt="" class="header-img">
     								</button>
     							</div>
-    							<a href="#popup-1" class="open-modal header-btn btn ">
+    							<a href="#popup-1" class="open-modal header-btn btn --mobil-hiden">
     								Написать нам
     							</a>
-    							<a href="#" class="header-user  bnt-hover">
+    							<a href="#" class="header-user  bnt-hover --mobil-hiden">
     								<img src="./assets/img/header/user.svg" alt="" class="header-img img-deactive-hover">
     								<img src="./assets/img/header/user-hover.svg" alt="" class="header-img img-active-hover">
     							</a>
@@ -1410,7 +1530,7 @@
     		<div class="container">
     			<div class="score-wrapp">
     				<div class="score-box-img">
-    					<img src="./assets/img/score/score.svg" alt="" class="score-img">
+    	
     				</div>
     				<div class="score-coll">
     					<div class="score-coll-box">
