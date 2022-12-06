@@ -1101,10 +1101,61 @@ $(() => {
 				body.classList.remove('--stop');
 				headerNav.classList.remove('--active');
 			})
-
+			window.addEventListener("resize", function () {
+				if (window.innerWidth >= 1400) {
+					fon.classList.remove('--active');
+					body.classList.remove('--stop');
+					headerNav.classList.remove('--active');
+					btn.forEach(item => {
+						item.classList.remove('--active');
+					})
+				}
+			})
 		}
 	}
 	menuOpen()
+
+	// открытие мобильной версии фильтра
+	function filterMob() {
+		let btn = document.querySelector('.filter-open');
+		if (btn) {
+			let panelright = document.querySelector('.panel-right');
+			let body = document.querySelector('body');
+			let fon = document.querySelector('.fon-filter');
+			let filterBtn = document.querySelector('.filter-btn');
+
+			let btnClose = document.querySelector('.fillter-close-btn');
+			btn.addEventListener('click', () => {
+				fon.classList.add('--active');
+				body.classList.add('--stop');
+				panelright.classList.add('--active');
+			})
+			fon.addEventListener('click', () => {
+				fon.classList.remove('--active');
+				body.classList.remove('--stop');
+				panelright.classList.remove('--active');
+			})
+			btnClose.addEventListener('click', () => {
+				fon.classList.remove('--active');
+				body.classList.remove('--stop');
+				panelright.classList.remove('--active');
+			})
+			filterBtn.addEventListener('click', () => {
+				fon.classList.remove('--active');
+				body.classList.remove('--stop');
+				panelright.classList.remove('--active');
+			})
+			window.addEventListener("resize", function () {
+				if (window.innerWidth >= 992) {
+					fon.classList.remove('--active');
+					body.classList.remove('--stop');
+					panelright.classList.remove('--active');
+				}
+			})
+		}
+
+	}
+	filterMob()
 
 	function headerRowMenu() {
 		const btn = document.querySelector('.header-row-menu-btn');
