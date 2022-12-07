@@ -334,6 +334,7 @@ $(() => {
 				}
 
 			});
+
 			const swiperPremium = new Swiper('#premium', {
 				grid: {
 					rows: 2,
@@ -639,7 +640,7 @@ $(() => {
 		let clenadrBoxONe = document.querySelector('.card-body-swiper');
 		if (clenadrBoxONe) {
 			const sliderThumbs = new Swiper('.card-body-swiper', { // ищем слайдер превью по селектору
-				direction: 'vertical',
+				direction: 'horizontal',
 				slidesPerView: 3,
 				loop: true,
 				slidesPerColumn: 1,
@@ -650,7 +651,11 @@ $(() => {
 				spaceBetween: 10,
 				centeredSlides: true,
 				centeredSlidesBounds: true,
-
+				breakpoints: {
+					880: {
+						direction: 'vertical',
+					}
+				}
 
 			});
 
